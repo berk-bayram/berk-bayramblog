@@ -1,0 +1,34 @@
+baseURL = 'https://berkbayram.com/'
+languageCode = 'tr'
+title = 'Berk Bayram | DevOps & Java'
+theme = 'PaperMod'
+
+[params]
+    env = 'production'
+    title = 'Berk Bayram'
+    description = 'DevOps Engineer'
+    author = 'Berk Bayram'
+    
+    # Ana sayfadaki profil kartı
+    [params.profileMode]
+        enabled = true
+        title = 'Berk Bayram'
+        subtitle = 'Java Backend Developer | DevOps Enthusiast | Cloud Explorer'
+        imageUrl = '' # Buraya ileride fotoğraf ekleyebiliriz
+        buttons = [
+            { name = 'Blog', url = '/posts' },
+            { name = 'CV', url = '/about' }
+        ]
+
+    # Sosyal medya linklerin
+    [[params.socialIcons]]
+        name = 'github'
+        url = 'https://github.com/berk-bayram'
+    [[params.socialIcons]]
+        name = 'linkedin'
+        url = 'https://linkedin.com/in/berk-bayram'
+
+    # Kod bloklarının görünümü (Java için önemli!)
+    [markup.highlight]
+        style = 'monokai'
+        lineNumbers = true
