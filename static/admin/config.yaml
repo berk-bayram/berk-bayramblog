@@ -1,0 +1,20 @@
+backend:
+  name: github
+  repo: berk-bayram/berk-bayramblog # Burası senin reponun yolu
+  branch: main
+
+media_folder: "static/images" # Resimlerin yükleneceği yer
+public_folder: "/images"
+
+collections:
+  - name: "posts"
+    label: "Blog Yazıları"
+    folder: "content/posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Başlık", name: "title", widget: "string"}
+      - {label: "Yayın Tarihi", name: "date", widget: "datetime"}
+      - {label: "Taslak mı?", name: "draft", widget: "boolean", default: false}
+      - {label: "Özet/Açıklama", name: "description", widget: "string", required: false}
+      - {label: "İçerik", name: "body", widget: "markdown"}
